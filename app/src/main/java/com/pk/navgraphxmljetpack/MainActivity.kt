@@ -6,6 +6,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.pk.navgraphxmljetpack.databinding.ActivityMainBinding
 
+/**
+ * https://stackoverflow.com/questions/76796254/android-navigation-define-argument
+ */
+
 class MainActivity : AppCompatActivity() {
 	private lateinit var binding: ActivityMainBinding
 	override fun onCreate(savedInstanceState: Bundle?) {

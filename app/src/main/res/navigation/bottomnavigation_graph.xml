@@ -15,12 +15,20 @@
         <action
             android:id="@+id/action_fragment1_to_fragment2"
             app:destination="@id/fragment2"
+            app:launchSingleTop="true"
             app:popUpTo="@id/fragment1"
             />
         <action
             android:id="@+id/action_fragment1_to_composeActivity"
             app:destination="@id/composeActivity"
+            app:launchSingleTop="true"
             app:popUpTo="@id/fragment1"
+            />
+        <argument
+            android:name="fromScreen"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"
             />
     </fragment>
     <fragment
@@ -32,6 +40,7 @@
         <action
             android:id="@+id/action_fragment2_to_composeActivity"
             app:destination="@id/composeActivity"
+            app:launchSingleTop="true"
             app:popUpTo="@id/fragment1"
             />
     </fragment>
