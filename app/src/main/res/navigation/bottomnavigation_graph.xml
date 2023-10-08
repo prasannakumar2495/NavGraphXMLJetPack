@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/bottomnavigation_graph"
+            app:startDestination="@id/fragment1"
+    >
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.pk.navgraphxmljetpack.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1"
+        >
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2"
+            app:popUpTo="@id/fragment1"
+            />
+        <action
+            android:id="@+id/action_fragment1_to_composeActivity"
+            app:destination="@id/composeActivity"
+            app:popUpTo="@id/fragment1"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.pk.navgraphxmljetpack.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2"
+        >
+        <action
+            android:id="@+id/action_fragment2_to_composeActivity"
+            app:destination="@id/composeActivity"
+            app:popUpTo="@id/fragment1"
+            />
+    </fragment>
+    <activity
+        android:id="@+id/composeActivity"
+        android:name="com.pk.navgraphxmljetpack.ComposeActivity"
+        android:label="ComposeActivity"
+        />
+</navigation>
